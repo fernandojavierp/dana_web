@@ -1,13 +1,23 @@
 export default function Contact() {
   return (
-    <div className="container mx-auto py-12">
-      <h1 className="text-4xl font-bold mb-8 text-center">Contact</h1>
-      <form className="max-w-lg mx-auto space-y-6">
-        <input type="text" placeholder="Your Name" className="w-full p-4 border rounded-lg" />
-        <input type="email" placeholder="Your Email" className="w-full p-4 border rounded-lg" />
-        <textarea placeholder="Your Message" className="w-full p-4 border rounded-lg h-32"></textarea>
-        <button className="w-full py-4 bg-blue-500 text-white rounded-lg hover:bg-blue-700">Send</button>
-      </form>
+    <div className="min-h-screen bg-white text-gray-800 py-16">
+      <div className="container mx-auto px-6 lg:px-12 space-y-16">
+        {/* Contact Section */}
+        <section className="text-left">
+          <h1 className="text-3xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-teal-400">
+            
+          </h1>
+          <p className="mt-8 text-lg leading-relaxed text-gray-500 max-w-4xl mx-auto text-left">
+            For further information, please write to: <a href="mailto:danadiesen@gmail.com" className="text-blue-500 hover:underline">danadiesen@gmail.com</a>
+          </p>
+          <p className="mt-2 text-lg leading-relaxed text-gray-500 max-w-4xl mx-auto text-left">
+            Or message me on Instagram: <a href="https://www.instagram.com/daanajey" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">@daanajey</a>
+          </p>
+          <p className="mt-2 text-lg leading-relaxed text-gray-500 max-w-4xl mx-auto text-left">
+            Have a nice day!
+          </p>
+        </section>
+      </div>
     </div>
   );
 }
