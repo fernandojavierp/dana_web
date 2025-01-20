@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Paintings() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -31,8 +32,8 @@ export default function Paintings() {
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 py-16 relative">
-      <div className="container mx-auto px-6 lg:px-12 space-y-16">
-      
+      <div className="container mx-auto px-6 lg:px-12 space-y-15">
+        
         {/* Paintings Gallery */}
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-8 list-none">
           {paintings.map((painting, index) => (
@@ -41,9 +42,11 @@ export default function Paintings() {
               className={`relative group ${index % 2 === 0 ? "mt-12" : "mb-8"}`}
             >
               {/* Painting Image */}
-              <img
+              <Image
                 src={painting.src}
                 alt={painting.title}
+                width={500}
+                height={500}
                 className="w-full h-auto object-contain"
                 onError={(e) => {
                   e.currentTarget.src = "/paintings/placeholder.jpg"; // Fallback image
