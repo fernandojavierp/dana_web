@@ -15,22 +15,31 @@ export default function Header() {
     } hover:text-purple-300 transition-colors duration-400`;
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-10 py-4 ${isHomePage ? "bg-transparent" : "bg-white border-b border-gray-200"}`}>
+    <header
+      className={`fixed top-0 left-0 w-full z-10 py-4 ${
+        isHomePage ? "bg-transparent" : "bg-white border-b border-gray-200"
+      }`}
+    >
       <nav className="container mx-auto flex justify-between items-center px-6 lg:px-12">
         {/* Logo / Brand */}
         <Link
           href="/"
-          className={`text-1xl font-bold tracking-tight ${isHomePage ? "text-white" : "text-gray-900"} hover:text-purple-300 transition-colors duration-700`}
+          className={`text-1xl font-bold tracking-tight ${
+            isHomePage ? "text-white" : "text-gray-900"
+          } hover:text-purple-300 transition-colors duration-700`}
         >
           DANA DIESENDORF
         </Link>
 
-        {/* Dropdown Menu for Mobile */}
-        <div className="relative lg:hidden">
+        {/* Dropdown Menu */}
+        <div className="relative">
           <button
-            className="text-white focus:outline-none"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            title={isMenuOpen ? "Close menu" : "Open menu"}
+            className={`lg:hidden ${
+              isHomePage ? "text-white" : "text-gray-900"
+            } focus:outline-none`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
           >
             <svg
               className="w-6 h-6"
@@ -48,24 +57,44 @@ export default function Header() {
             </svg>
           </button>
           {isMenuOpen && (
-            <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
-              <Link href="/paintings" className={linkClasses("/paintings")}>
+            <div
+              className={`absolute right-0 mt-2 w-48 ${
+                isHomePage ? "bg-transparent" : "bg-white bg-opacity-90"
+              } shadow-md rounded-lg py-2 text-center lg:hidden`}
+            >
+              <Link
+                href="/paintings"
+                className={`${linkClasses("/paintings")} block py-2`}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 PAINTINGS
               </Link>
-              <Link href="/expositions" className={linkClasses("/expositions")}>
+              <Link
+                href="/expositions"
+                className={`${linkClasses("/expositions")} block py-2`}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 EXPOSITIONS
               </Link>
-              <Link href="/about" className={linkClasses("/about")}>
+              <Link
+                href="/about"
+                className={`${linkClasses("/about")} block py-2`}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 ABOUT ME
               </Link>
-              <Link href="/contact" className={linkClasses("/contact")}>
+              <Link
+                href="/contact"
+                className={`${linkClasses("/contact")} block py-2`}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 CONTACT
               </Link>
             </div>
           )}
         </div>
 
-        {/* Navigation Links for larger screens */}
+        {/* Navigation Links (Desktop) */}
         <div className="hidden lg:flex space-x-6">
           <Link href="/paintings" className={linkClasses("/paintings")}>
             PAINTINGS
