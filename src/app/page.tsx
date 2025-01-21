@@ -2,12 +2,13 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="h-screen flex items-center justify-center bg-cover bg-center">
+    <div className="relative h-screen overflow-hidden">
       <Image 
         src="/header_dana.png" 
         alt="Header Image" 
         layout="fill" 
         objectFit="cover" 
+        className="absolute inset-0 w-full h-full"
       />
     </div>
   );

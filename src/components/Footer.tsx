@@ -11,7 +11,7 @@ export default function Footer() {
   const textClass = isHomePage ? "text-white" : "text-gray-600";
 
   return (
-    <footer className={`w-full py-4 ${footerClass} ${isHomePage ? "absolute bottom-0" : ""}`}>
+    <footer className={`w-full py-1 ${footerClass} ${isHomePage ? "absolute bottom-0" : ""}`}>
       <div className="container mx-auto px-4 text-center">
         <p className={`text-sm ${textClass}`}>
           &copy; {new Date().getFullYear()} Dana Diesendorf. All rights reserved.
