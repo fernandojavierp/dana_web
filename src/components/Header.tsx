@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-10 py-4 ${
-        isHomePage ? "bg-transparent" : "bg-white border-b border-gray-200"
+        isHomePage ? "bg-transparent" : "bg-gray-50"
       }`}
     >
       <nav className="container mx-auto flex justify-between items-center px-6 lg:px-12">
@@ -58,9 +58,9 @@ export default function Header() {
           </button>
           {isMenuOpen && (
             <div
-              className={`absolute right-0 mt-2 w-48 ${
-                isHomePage ? "bg-transparent" : "bg-white bg-opacity-90"
-              } shadow-md rounded-lg py-2 text-center lg:hidden`}
+              className={`absolute right-0 text-right mt-1 w-40 h-40 ${
+                isHomePage ? "bg-transparent" : "bg-gray-50 bg-opacity-97"
+              } py-2 text-center lg:hidden`}
             >
               <Link
                 href="/paintings"

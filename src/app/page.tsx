@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="relative h-screen overflow-hidden">
       <Image 
-        src="/header_dana.png" 
+        src="/home_dana_bg.jpg" 
         alt="Header Image" 
         layout="fill" 
         objectFit="cover" 

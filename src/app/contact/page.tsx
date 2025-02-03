@@ -1,6 +1,7 @@
+
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-white text-gray-800 py-16">
+    <div className="min-h-screen bg-gray-50 text-gray-800 py-16">
       <div className="container mx-auto px-6 lg:px-12 space-y-16">
         {/* Contact Section */}
         <section className="text-left">
