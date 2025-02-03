@@ -10,6 +10,8 @@ export default function Home() {
         objectFit="cover" 
         className="absolute inset-0 w-full h-full"
         priority
+        quality={100}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
       />
     </div>
   );

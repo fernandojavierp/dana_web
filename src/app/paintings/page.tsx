@@ -64,6 +64,8 @@ export default function Paintings() {
                   width={500}
                   height={500}
                   className="w-full h-auto object-contain"
+                  priority
+                  quality={100}
                   onError={(e) => {
                     e.currentTarget.src = "/paintings/placeholder.jpg"; // Fallback image
                   }}
