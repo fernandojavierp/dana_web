@@ -9,6 +9,7 @@ export default function Home() {
         layout="fill" 
         objectFit="cover" 
         className="absolute inset-0 w-full h-full"
+        priority
       />
     </div>
   );
